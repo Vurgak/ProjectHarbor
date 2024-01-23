@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  projectharbor.projects:
+    container_name: projectharbor.projects
+    image: ${DOCKER_REGISTRY-}projectharbor-projects
+    build:
+      context: .
+      dockerfile: services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/Dockerfile
+    depends_on:
+      - projectharbor.database
+
+  projectharbor.database:
+    container_name: projectharbor.database
+    image: mcr.microsoft.com/mssql/server:2022-latest

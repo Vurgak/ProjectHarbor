@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F86184A-709D-49D0-BC8C-C3D59F950E09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{85DB7C8A-7F6C-48F7-B533-FDB698949B8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectHarbor.Projects", "ProjectHarbor.Projects", "{F2E6B783-E6DC-4E97-9A22-295DD68E9007}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.WebApi", "src\services\ProjectHarbor.Projects\ProjectHarbor.Projects.WebApi\ProjectHarbor.Projects.WebApi.csproj", "{FDB42A27-90A7-418E-951E-30909AC112C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.Application", "src\services\ProjectHarbor.Projects\ProjectHarbor.Projects.Application\ProjectHarbor.Projects.Application.csproj", "{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.Persistence", "src\services\ProjectHarbor.Projects\ProjectHarbor.Projects.Persistence\ProjectHarbor.Projects.Persistence.csproj", "{C8A647BB-72D6-4708-91A2-DA9EE02693AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.Shared", "src\services\ProjectHarbor.Projects\ProjectHarbor.Projects.Shared\ProjectHarbor.Projects.Shared.csproj", "{2D1F5AF6-9859-4763-88B7-4A24487F3229}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0B41D5EE-6192-474F-A696-820E48AB3188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{7974076E-79E2-459D-97F8-724C06BCD7DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectHarbor.Projects", "ProjectHarbor.Projects", "{9339B382-5411-4208-8927-3448B2C4F85E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.Application.UnitTests", "tests\services\ProjectHarbor.Projects\ProjectHarbor.Projects.Application.UnitTests\ProjectHarbor.Projects.Application.UnitTests.csproj", "{B0B6AF3E-9021-45EC-AD4D-920F64E3C861}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src\docker-compose.dcproj", "{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectHarbor.Projects.WebApi.UnitTests", "tests\services\ProjectHarbor.Projects\ProjectHarbor.Projects.WebApi.UnitTests\ProjectHarbor.Projects.WebApi.UnitTests.csproj", "{A66B73C1-13F1-49AB-BA15-E49F2DA066EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{1064783A-83E0-4862-93AC-6792DF00107F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{92CDDB66-C2DD-4832-999E-1E09028CCD30}"
+	ProjectSection(SolutionItems) = preProject
+		postman\ProjectHarbor.postman_collection.json = postman\ProjectHarbor.postman_collection.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDB42A27-90A7-418E-951E-30909AC112C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB42A27-90A7-418E-951E-30909AC112C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB42A27-90A7-418E-951E-30909AC112C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB42A27-90A7-418E-951E-30909AC112C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A647BB-72D6-4708-91A2-DA9EE02693AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A647BB-72D6-4708-91A2-DA9EE02693AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A647BB-72D6-4708-91A2-DA9EE02693AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A647BB-72D6-4708-91A2-DA9EE02693AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1F5AF6-9859-4763-88B7-4A24487F3229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1F5AF6-9859-4763-88B7-4A24487F3229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1F5AF6-9859-4763-88B7-4A24487F3229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1F5AF6-9859-4763-88B7-4A24487F3229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B6AF3E-9021-45EC-AD4D-920F64E3C861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B6AF3E-9021-45EC-AD4D-920F64E3C861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B6AF3E-9021-45EC-AD4D-920F64E3C861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B6AF3E-9021-45EC-AD4D-920F64E3C861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66B73C1-13F1-49AB-BA15-E49F2DA066EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66B73C1-13F1-49AB-BA15-E49F2DA066EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66B73C1-13F1-49AB-BA15-E49F2DA066EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66B73C1-13F1-49AB-BA15-E49F2DA066EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85DB7C8A-7F6C-48F7-B533-FDB698949B8A} = {2F86184A-709D-49D0-BC8C-C3D59F950E09}
+		{F2E6B783-E6DC-4E97-9A22-295DD68E9007} = {85DB7C8A-7F6C-48F7-B533-FDB698949B8A}
+		{FDB42A27-90A7-418E-951E-30909AC112C3} = {F2E6B783-E6DC-4E97-9A22-295DD68E9007}
+		{9953FD84-2FE2-44E5-8F6B-90800A8A5D5C} = {F2E6B783-E6DC-4E97-9A22-295DD68E9007}
+		{C8A647BB-72D6-4708-91A2-DA9EE02693AB} = {F2E6B783-E6DC-4E97-9A22-295DD68E9007}
+		{2D1F5AF6-9859-4763-88B7-4A24487F3229} = {F2E6B783-E6DC-4E97-9A22-295DD68E9007}
+		{7974076E-79E2-459D-97F8-724C06BCD7DE} = {0B41D5EE-6192-474F-A696-820E48AB3188}
+		{9339B382-5411-4208-8927-3448B2C4F85E} = {7974076E-79E2-459D-97F8-724C06BCD7DE}
+		{B0B6AF3E-9021-45EC-AD4D-920F64E3C861} = {9339B382-5411-4208-8927-3448B2C4F85E}
+		{3BF343A1-C7BB-4BC8-8099-81B9F891F5FE} = {2F86184A-709D-49D0-BC8C-C3D59F950E09}
+		{A66B73C1-13F1-49AB-BA15-E49F2DA066EA} = {9339B382-5411-4208-8927-3448B2C4F85E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5B3A607-8AF6-4D66-B8E3-3862F7212C30}
+	EndGlobalSection
+EndGlobal

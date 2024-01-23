@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  projectharbor.projects:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "7002:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  projectharbor.database:
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=kW9S4U&Rt/!txO3D
+    ports:
+      - "1433:1433"

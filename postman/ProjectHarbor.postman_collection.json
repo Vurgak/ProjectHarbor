@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "02b4b675-f012-4ae2-a7bf-697ddafaa080",
+		"name": "ProjectHarbor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29769185"
+	},
+	"item": [
+		{
+			"name": "ApiGateway",
+			"item": []
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Test Project 2\",\r\n  \"codeRepositoryUrl\": \"https://github.com/Vurgak/TestProject\",\r\n  \"price\": null,\r\n  \"briefDescription\": \"A test brief.\",\r\n  \"description\": \"# Test Project\\n\\nA Test Project long description.\\n\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROJECTS_API_URL}}/projects",
+							"host": [
+								"{{PROJECTS_API_URL}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Test Project Updated Twice\",\r\n  \"codeRepositoryUrl\": \"https://github.com/Vurgak/TestProject\",\r\n  \"price\": null,\r\n  \"briefDescription\": \"A test brief.\",\r\n  \"description\": \"# Test Project\\n\\nA Test Project long description.\\n\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROJECTS_API_URL}}/projects/:projectId",
+							"host": [
+								"{{PROJECTS_API_URL}}"
+							],
+							"path": [
+								"projects",
+								":projectId"
+							],
+							"variable": [
+								{
+									"key": "projectId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{PROJECTS_API_URL}}/projects/:projectId",
+							"host": [
+								"{{PROJECTS_API_URL}}"
+							],
+							"path": [
+								"projects",
+								":projectId"
+							],
+							"variable": [
+								{
+									"key": "projectId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROJECTS_API_URL}}/projects/:projectId",
+							"host": [
+								"{{PROJECTS_API_URL}}"
+							],
+							"path": [
+								"projects",
+								":projectId"
+							],
+							"variable": [
+								{
+									"key": "projectId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROJECTS_API_URL}}/projects?sortOrder=newest&sortOrder=updated",
+							"host": [
+								"{{PROJECTS_API_URL}}"
+							],
+							"path": [
+								"projects"
+							],
+							"query": [
+								{
+									"key": "sortOrder",
+									"value": "newest"
+								},
+								{
+									"key": "sortOrder",
+									"value": "updated"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "GATEWAY_URL",
+			"value": "https://localhost:7001",
+			"type": "string"
+		},
+		{
+			"key": "PROJECTS_API_URL",
+			"value": "http://localhost:7002",
+			"type": "string"
+		}
+	]
+}
