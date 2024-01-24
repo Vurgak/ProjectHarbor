@@ -1,6 +1,10 @@
 version: '3.4'
 
 services:
+  projectharbor.webclient:
+    ports:
+      - "7100:8080"
+
   projectharbor.apigateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

@@ -1,6 +1,17 @@
 version: '3.4'
 
 services:
+  projectharbor.webclient:
+    container_name: projectharbor.webclient
+    build:
+      context: clients/ProjectHarbor.WebClient
+      dockerfile: Dockerfile.Development
+    volumes:
+      - ./clients/ProjectHarbor.WebClient:/app
+      - /app/node_modules
+    depends_on:
+      - projectharbor.apigateway
+
   projectharbor.apigateway:
     container_name: projectharbor.apigateway
     image: ${DOCKER_REGISTRY-}projectharborapigateway
