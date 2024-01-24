@@ -1,6 +1,15 @@
 version: '3.4'
 
 services:
+  projectharbor.apigateway:
+    container_name: projectharbor.apigateway
+    image: ${DOCKER_REGISTRY-}projectharborapigateway
+    build:
+      context: .
+      dockerfile: gateway/ProjectHarbor.ApiGateway/Dockerfile
+    depends_on:
+      - projectharbor.projects
+
   projectharbor.projects:
     container_name: projectharbor.projects
     image: ${DOCKER_REGISTRY-}projectharbor-projects

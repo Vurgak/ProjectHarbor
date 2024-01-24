@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/projects",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projectharbor.projects",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/projects",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/projects/{rest}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projectharbor.projects",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{rest}",
+      "UpstreamHttpMethod": []
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7001"
+  }
+}
