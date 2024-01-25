@@ -8,9 +8,9 @@ public class ProjectEntity
 {
     public int Id { get; set; }
 
-    public DateTime CreatedAt {  get; set; }
+    public DateTimeOffset CreatedAt {  get; set; }
 
-    public DateTime? ModifiedAt {  get; set; }
+    public DateTimeOffset? ModifiedAt {  get; set; }
 
     [MaxLength(ProjectConstraints.MaxNameLength)]
     public string Name { get; set; } = string.Empty;

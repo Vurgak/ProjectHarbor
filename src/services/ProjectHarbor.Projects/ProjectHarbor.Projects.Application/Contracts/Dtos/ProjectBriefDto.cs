@@ -4,9 +4,9 @@ public class ProjectBriefDto
 {
     public int Id { get; init; }
 
-    public DateTime CreatedAt { get; init; }
+    public DateTimeOffset CreatedAt { get; init; }
 
-    public DateTime? ModifiedAt { get; init; }
+    public DateTimeOffset? ModifiedAt { get; init; }
 
     public string Name { get; init; } = string.Empty;
 
