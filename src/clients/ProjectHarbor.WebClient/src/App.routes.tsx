@@ -3,7 +3,7 @@ import MainLayout from '@/layouts/MainLayout'
 import HomePage from '@/pages/HomePage';
 import BrowsePage from '@/pages/BrowsePage';
 import ProjectPage from '@/pages/ProjectPage';
-import AddProjectPage from '@/pages/AddProjectPage';
+import NewProjectPage from '@/pages/NewProjectPage';
 import SignUpPage from './pages/auth/SignUpPage';
 import SignInPage from './pages/auth/SignInPage';
 import AuthLayout from './layouts/AuthLayout';
@@ -23,7 +23,7 @@ export const appRoutes: RouteObject[] = [
       },
       {
         path: 'project/new',
-        element: <AddProjectPage />
+        element: <NewProjectPage />
       },
       {
         path: 'project/:projectId',
