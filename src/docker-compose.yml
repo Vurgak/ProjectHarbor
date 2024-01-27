@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile.Development
     depends_on:
       - projectharbor.apigateway
+      - projectharbor.identity
 
   projectharbor.apigateway:
     container_name: projectharbor.apigateway
@@ -24,6 +25,8 @@ services:
     build:
       context: .
       dockerfile: services/ProjectHarbor.Identity/ProjectHarbor.Identity.WebApi/Dockerfile
+    depends_on:
+      - projectharbor.database
 
   projectharbor.projects:
     container_name: projectharbor.projects
@@ -37,4 +40,3 @@ services:
   projectharbor.database:
     container_name: projectharbor.database
     image: mcr.microsoft.com/mssql/server:2022-latest
-

@@ -81,7 +81,7 @@ body {
 }
 
 .button-muted {
-  @apply px-4 py-2 border rounded-md font-medium;
+  @apply px-4 py-2 border rounded-md font-medium text-sm text-center;
 }
 
 .button-primary {
@@ -89,5 +89,5 @@ body {
 }
 
 .button-solid {
-  @apply button-muted bg-primary text-primary-foreground;
+  @apply button-muted bg-primary border-primary text-primary-foreground;
 }
