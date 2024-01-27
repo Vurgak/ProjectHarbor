@@ -7,7 +7,7 @@
     <ProjectGuid>3bf343a1-c7bb-4bc8-8099-81b9f891f5fe</ProjectGuid>
     <DockerComposeProjectName>projectharbor</DockerComposeProjectName>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceUrl>http://localhost:7100</DockerServiceUrl>
     <DockerServiceName>projectharbor.identity</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
