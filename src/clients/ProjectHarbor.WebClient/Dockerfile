@@ -1,12 +1,12 @@
-FROM node:20 AS builder
+FROM node:20-alpine
 WORKDIR /app
 COPY package.json ./
-RUN npm clean-install
+RUN npm install
 
 COPY . .
 RUN npm run build
 
-FROM nginx:stable-alpine
+FROM nginx:1.25-alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 

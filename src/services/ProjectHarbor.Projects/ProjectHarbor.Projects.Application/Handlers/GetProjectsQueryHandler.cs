@@ -27,10 +27,13 @@ internal class GetProjectsQueryHandler(DatabaseContext databaseContext, IMapper 
             _ => throw new NotImplementedException($"Sorting by '{query.SortOrder}' is not implemented"),
         };
 
+
         var entities = await entitiesQuery
             .Skip(query.PageOffset)
             .Take(query.PageSize)
             .ToListAsync(cancellationToken);
+
+        var totalCount = await entitiesQuery.CountAsync(cancellationToken);
 
         var dtos = mapper.Map<IEnumerable<ProjectBriefDto>>(entities);
         return new ProjectsViewModel()
@@ -38,6 +41,7 @@ internal class GetProjectsQueryHandler(DatabaseContext databaseContext, IMapper 
             Projects = dtos,
             PageOffset = query.PageOffset,
             PageSize = query.PageSize,
+            TotalCount = totalCount,
         };
     }
 }

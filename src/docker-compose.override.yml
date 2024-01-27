@@ -4,6 +4,9 @@ services:
   projectharbor.webclient:
     ports:
       - "7100:8080"
+    volumes:
+      - ./clients/ProjectHarbor.WebClient:/app
+      - /app/node_modules
 
   projectharbor.apigateway:
     environment:

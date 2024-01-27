@@ -6,9 +6,6 @@ services:
     build:
       context: clients/ProjectHarbor.WebClient
       dockerfile: Dockerfile.Development
-    volumes:
-      - ./clients/ProjectHarbor.WebClient:/app
-      - /app/node_modules
     depends_on:
       - projectharbor.apigateway
 
