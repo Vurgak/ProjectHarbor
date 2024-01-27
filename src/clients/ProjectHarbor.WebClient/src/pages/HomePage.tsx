@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center w-full mb-16">
+    <div className="flex flex-col flex-1 gap-8 items-center justify-center w-full mb-16">
       <h2 className="text-center text-6xl font-bold tracking-tight">
         Show your creativity and coding skill
       </h2>
