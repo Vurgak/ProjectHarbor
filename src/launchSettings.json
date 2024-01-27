@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "projectharbor.projects.webapi": "StartDebugging",
-        "projectharbor.apigateway": "StartDebugging"
+        "projectharbor.apigateway": "StartDebugging",
+        "projectharbor.identity.webapi": "StartDebugging"
       }
     }
   }
