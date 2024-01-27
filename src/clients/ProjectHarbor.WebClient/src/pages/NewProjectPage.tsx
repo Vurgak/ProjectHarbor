@@ -7,10 +7,13 @@ import { TextArea } from '@/components/ui/textarea';
 import CreateProjectCommand from '@/models/commands/project/CreateProjectCommand';
 import { useProjectRequest } from '@/hooks/project/useProjectRequest';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function NewProjectPage() {
   const navigate = useNavigate()
   const { createProject } = useProjectRequest()
+
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const form = useForm<CreateProjectCommand>({
     defaultValues: {
@@ -27,8 +30,10 @@ export default function NewProjectPage() {
       data.codeRepositoryUrl = null
 
     const projectId = await createProject(data);
-    navigate(`/project/${projectId}`)
-    console.log(data)
+    if (projectId != null)
+      navigate(`/project/${projectId}`)
+    else
+      setErrorMessage('Form is not filled correctly')
   }
 
   return (
@@ -93,6 +98,12 @@ export default function NewProjectPage() {
             </FormItem>
           )}
         />
+
+        {errorMessage && (
+          <div className="border rounded border-rose-500 p-4 text-balance text-rose-500">
+            {errorMessage}
+          </div>
+        )}
 
         <div className="flex justify-end">
           <Button type="submit">Create project</Button>

@@ -14,7 +14,7 @@ export function useProjectRequest() {
     })
 
     var data = await response.json() as ProjectViewModel
-    return data.id
+    return data?.id
   }
 
   return {
