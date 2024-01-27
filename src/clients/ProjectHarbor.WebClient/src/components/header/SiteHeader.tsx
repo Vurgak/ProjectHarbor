@@ -16,7 +16,7 @@ export default function SiteHeader() {
   const { pathname: currentRoute } = useLocation()
 
   return (
-    <header className="sticky top-0 flex items-center h-16 px-6 gap-4 border-b">
+    <header className="sticky top-0 z-50 flex items-center h-16 px-6 gap-4 border-b bg-background">
       <section className="font-bold">Project Harbor</section>
 
       <nav>
