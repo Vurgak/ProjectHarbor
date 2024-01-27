@@ -6,9 +6,9 @@
     <DockerPublishLocally>False</DockerPublishLocally>
     <ProjectGuid>3bf343a1-c7bb-4bc8-8099-81b9f891f5fe</ProjectGuid>
     <DockerComposeProjectName>projectharbor</DockerComposeProjectName>
-    <DockerLaunchAction>None</DockerLaunchAction>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>projectharbor.apigateway</DockerServiceName>
+    <DockerServiceName>projectharbor.identity</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

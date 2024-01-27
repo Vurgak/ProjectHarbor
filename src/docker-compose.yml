@@ -10,6 +10,13 @@ services:
     depends_on:
       - projectharbor.projects
 
+  projectharbor.identity:
+    container_name: projectharbor.identity
+    image: ${DOCKER_REGISTRY-}projectharboridentitywebapi
+    build:
+      context: .
+      dockerfile: services/ProjectHarbor.Identity/ProjectHarbor.Identity.WebApi/Dockerfile
+
   projectharbor.projects:
     container_name: projectharbor.projects
     image: ${DOCKER_REGISTRY-}projectharbor-projects
@@ -22,3 +29,4 @@ services:
   projectharbor.database:
     container_name: projectharbor.database
     image: mcr.microsoft.com/mssql/server:2022-latest
+

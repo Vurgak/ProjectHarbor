@@ -1,0 +1,6 @@
+@ProjectHarbor.Identity.WebApi_HostAddress = http://localhost:5164
+
+GET {{ProjectHarbor.Identity.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
