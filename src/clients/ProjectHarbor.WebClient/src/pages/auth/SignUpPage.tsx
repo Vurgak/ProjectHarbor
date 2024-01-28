@@ -5,7 +5,7 @@ import { buttonVariants } from '@/components/ui/button';
 export default function SignUpPage() {
   const navigate = useNavigate()
 
-  const handleSubmit = () => navigate('/auth/sign-in')
+  const handleSubmit = () => navigate('/auth/confirm')
 
   return (
     <>

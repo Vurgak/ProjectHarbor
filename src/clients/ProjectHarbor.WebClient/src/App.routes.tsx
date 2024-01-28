@@ -1,12 +1,13 @@
 import { RouteObject } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout'
+import AuthLayout from '@/layouts/AuthLayout';
 import HomePage from '@/pages/HomePage';
 import BrowsePage from '@/pages/BrowsePage';
 import ProjectPage from '@/pages/ProjectPage';
 import NewProjectPage from '@/pages/NewProjectPage';
-import SignUpPage from './pages/auth/SignUpPage';
-import SignInPage from './pages/auth/SignInPage';
-import AuthLayout from './layouts/AuthLayout';
+import SignUpPage from '@/pages/auth/SignUpPage';
+import SignInPage from '@/pages/auth/SignInPage';
+import ConfirmEmailPage from '@/pages/auth/ConfirmEmailPage';
 
 export const appRoutes: RouteObject[] = [
   {
@@ -42,6 +43,10 @@ export const appRoutes: RouteObject[] = [
       {
         path: 'sign-up',
         element: <SignUpPage />
+      },
+      {
+        path: 'confirm',
+        element: <ConfirmEmailPage />
       }
     ]
   }
