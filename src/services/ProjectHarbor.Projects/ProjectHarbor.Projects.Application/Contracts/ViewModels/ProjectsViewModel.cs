@@ -9,4 +9,6 @@ public class ProjectsViewModel
     public int PageOffset { get; init; }
 
     public int PageSize { get; init; }
+
+    public int TotalCount { get; init; }
 }

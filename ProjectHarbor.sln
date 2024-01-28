@@ -46,6 +46,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectHarbor.Identity", "ProjectHarbor.Identity", "{37C83A99-7CFC-407C-95DE-3632A6A214E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectHarbor.Identity.WebApi", "src\services\ProjectHarbor.Identity\ProjectHarbor.Identity.WebApi\ProjectHarbor.Identity.WebApi.csproj", "{49EF8F45-88B9-4711-93CD-6B4D412BA197}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{20B9BBE0-8F72-4F8E-B69F-7DCD61D0607F}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ProjectHarbor.WebClient", "src\clients\ProjectHarbor.WebClient\ProjectHarbor.WebClient.esproj", "{2B6D7F1D-299F-4593-8390-A5826D386DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +92,12 @@ Global
 		{49EF8F45-88B9-4711-93CD-6B4D412BA197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49EF8F45-88B9-4711-93CD-6B4D412BA197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49EF8F45-88B9-4711-93CD-6B4D412BA197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +118,8 @@ Global
 		{1738E7C4-A653-4F2F-9FBF-F4DFB2AD48CB} = {B633BA9E-C59B-4698-9D8D-4244359ADAC1}
 		{37C83A99-7CFC-407C-95DE-3632A6A214E1} = {85DB7C8A-7F6C-48F7-B533-FDB698949B8A}
 		{49EF8F45-88B9-4711-93CD-6B4D412BA197} = {37C83A99-7CFC-407C-95DE-3632A6A214E1}
+		{20B9BBE0-8F72-4F8E-B69F-7DCD61D0607F} = {2F86184A-709D-49D0-BC8C-C3D59F950E09}
+		{2B6D7F1D-299F-4593-8390-A5826D386DBD} = {20B9BBE0-8F72-4F8E-B69F-7DCD61D0607F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5B3A607-8AF6-4D66-B8E3-3862F7212C30}

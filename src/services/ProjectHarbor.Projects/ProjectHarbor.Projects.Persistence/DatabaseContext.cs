@@ -26,11 +26,11 @@ public class DatabaseContext(DbContextOptions options) : DbContext(options)
             switch (entry.State)
             {
                 case EntityState.Added:
-                    entry.Entity.CreatedAt = DateTime.Now;
+                    entry.Entity.CreatedAt = DateTimeOffset.Now;
                     break;
 
                 case EntityState.Modified:
-                    entry.Entity.ModifiedAt = DateTime.Now;
+                    entry.Entity.ModifiedAt = DateTimeOffset.Now;
                     break;
             }
         }
