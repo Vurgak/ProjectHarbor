@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 
 export default function ConfirmEmailPage() {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, _] = useSearchParams()
   const email = searchParams.get('email')
   console.log(email)
   return (
