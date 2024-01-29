@@ -1,9 +1,8 @@
 import { useForm } from 'react-hook-form';
-import * as z from "zod"
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { TextArea } from '@/components/ui/textarea';
+import { Textarea } from '@/components/ui/textarea';
 import CreateProjectCommand from '@/models/commands/project/CreateProjectCommand';
 import { useProjectRequest } from '@/hooks/project/useProjectRequest';
 import { useNavigate } from 'react-router-dom';
@@ -93,7 +92,7 @@ export default function NewProjectPage() {
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <TextArea {...field} />
+                <Textarea {...field} />
               </FormControl>
             </FormItem>
           )}

@@ -3,7 +3,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useAuthRequest } from '@/hooks/auth/useAuthRequest'
-import { useNavigate } from 'react-router-dom'
 
 type SignUpFormProps = {
   onSubmit: () => void

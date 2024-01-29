@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 
 type SearchBarProps = {
@@ -9,11 +9,12 @@ type SearchBarProps = {
 export default function SearchBar({ disabled, onSearch }: SearchBarProps) {
   const [text, setText] = useState('');
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleInput = (text: string) => {
+    setText(text)
     onSearch(text)
   }
 
   return (
-    <Input type="text" value={text} onChange={event => setText(event.target.value)} disabled={disabled} />
+    <Input type="text" value={text} onChange={event => handleInput(event.target.value)} disabled={disabled} />
   )
 }
