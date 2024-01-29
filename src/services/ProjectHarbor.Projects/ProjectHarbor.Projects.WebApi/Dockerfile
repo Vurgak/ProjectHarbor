@@ -9,10 +9,13 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/ProjectHarbor.Projects.WebApi.csproj", "src/services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/"]
-RUN dotnet restore "./src/services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/./ProjectHarbor.Projects.WebApi.csproj"
+COPY ["services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/ProjectHarbor.Projects.WebApi.csproj", "services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/"]
+COPY ["services/ProjectHarbor.Projects/ProjectHarbor.Projects.Application/ProjectHarbor.Projects.Application.csproj", "services/ProjectHarbor.Projects/ProjectHarbor.Projects.Application/"]
+COPY ["services/ProjectHarbor.Projects/ProjectHarbor.Projects.Persistence/ProjectHarbor.Projects.Persistence.csproj", "services/ProjectHarbor.Projects/ProjectHarbor.Projects.Persistence/"]
+COPY ["services/ProjectHarbor.Projects/ProjectHarbor.Projects.Shared/ProjectHarbor.Projects.Shared.csproj", "services/ProjectHarbor.Projects/ProjectHarbor.Projects.Shared/"]
+RUN dotnet restore "./services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi/ProjectHarbor.Projects.WebApi.csproj"
 COPY . .
-WORKDIR "/src/src/services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi"
+WORKDIR "/src/services/ProjectHarbor.Projects/ProjectHarbor.Projects.WebApi"
 RUN dotnet build "./ProjectHarbor.Projects.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
